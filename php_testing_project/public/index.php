@@ -2,7 +2,7 @@
 	// header("Content-Type: application/vnd.ms-word");
 	// header("Expires: 0");
 	// header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-	// header("content-disposition: attachment;filename=sifat.doc");
+	// header("content-disposition: attachment;filename=Report.doc");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
