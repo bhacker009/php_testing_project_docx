@@ -8,6 +8,5 @@
 
 		$stmnt = $db->prepare("INSERT INTO users (name, email, password) VALUES (?,?,?) ");
 		$stmnt->execute([$username, $email, $password]) or die("Couldn't connect !!");
-	} else {
-		header('location: .././public/index.php')
+		header('location: ../../public/index.php');
 	}

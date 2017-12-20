@@ -4,11 +4,6 @@
 
   $stmnt = $db->query("SELECT * FROM users WHERE user_id = $user_id") or die("CONNECTION ERROR");
   $result = $stmnt->fetch(PDO::FETCH_ASSOC);
- 
-  if(isset($_REQUEST['print'])) {
-    include('../src/app.php');
-  }
-
 
 ?>
 
@@ -41,6 +36,21 @@ th{
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+.line{
+  text-align: center;
+  margin-top: 10px;
+}
+
+input[type="submit"] {
+  width: 20%;
+  height: 40px;
+  margin-bottom: 5px;
+  background: royalblue;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -58,10 +68,14 @@ tr:nth-child(even) {
   </tr>
   
 </table>
-
-  <form action="" method="post">
-    <input type="submit" name="print" value="print">
+<div class="line">
+  <form class="doc" action="print_as_msWord.php?id= <?= $user_id?>" method="post">
+    <input type="submit" name="print" value="Get Document (.doc)">
   </form>
+  <form class="pdf" action="print_as_pdf.php?id= <?= $user_id?>" method="post">
+    <input type="submit" name="print" value="PDF">
+  </form>
+</div>
 
 </body>
 </html>
